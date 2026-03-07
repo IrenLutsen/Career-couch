@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Iryna Lutsenko | Career coach</title>
+<title>Iryna Lutsenko | Career Coach</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -83,6 +83,14 @@
     font-weight: 600;
     color: var(--navy);
     letter-spacing: -1px;
+    overflow: hidden;
+  }
+
+  .avatar-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
   }
 
   .badge {
@@ -565,7 +573,11 @@
   <div class="header">
     <div class="avatar-wrap">
       <div class="avatar-ring">
-        <div class="avatar-inner">IL</div>
+        <div class="avatar-inner">
+          <!-- Щоб додати фото: завантаж фото.jpg в GitHub і заміни рядок нижче -->
+          <!-- <img src="photo.jpg" alt="Iryna Lutsenko"> -->
+          IL
+        </div>
       </div>
       <div class="badge">✦</div>
     </div>
@@ -576,14 +588,14 @@
     </div>
 
     <div class="name">Iryna Lutsenko</div>
-    <div class="tagline">Career coach · Профорієнтація</div>
-    <p class="bio">Допомагаю дорослим і підліткам знайти своє покликання - через глибокий аналіз особистості, практичні інструменти та підтримку на кожному кроці.</p>
+    <div class="tagline">Career Coach · Профорієнтація</div>
+    <p class="bio">Допомагаю дорослим і підліткам знайти своє покликання — через глибокий аналіз особистості, практичні інструменти та підтримку на кожному кроці.</p>
   </div>
 
   <!-- Quote block -->
   <div class="notion-preview">
     <div class="notion-tag">✦ &nbsp;Моя філософія</div>
-    <div class="notion-quote">«Коли людина знаходить своє покликання - з'являється енергія, впевненість і бажання вставати вранці.»</div>
+    <div class="notion-quote">«Коли людина знаходить своє покликання — з'являється енергія, впевненість і бажання вставати вранці.»</div>
   </div>
 
   <!-- Divider -->
@@ -599,7 +611,7 @@
       <div class="link-icon">🎁</div>
       <div class="link-content">
         <div class="link-title">Безкоштовна перша зустріч</div>
-        <div class="link-sub">Записатись · 30 хвилин · онлайн </div>
+        <div class="link-sub">Записатись · 30–45 хвилин · онлайн або офлайн</div>
       </div>
       <div class="link-arrow">→</div>
     </button>
@@ -608,12 +620,12 @@
       <div class="link-icon">⭐</div>
       <div class="link-content">
         <div class="link-title">Пакети та послуги</div>
-        <div class="link-sub">Старт від 50€ · Повний супровід від 200€</div>
+        <div class="link-sub">Старт від 50€ · Повне супроводження від 150€</div>
       </div>
       <div class="link-arrow">→</div>
     </button>
 
-    <a class="link-btn btn-outline" href="https://www.notion.so/Career-coach-31ca5dda999380c89670f5208fae1e79?source=copy_link" target="_blank">
+    <a class="link-btn btn-outline" href="https://www.notion.so/Career-coach-31ca5dda999380c89670f5208fae1e79" target="_blank">
       <div class="link-icon">📋</div>
       <div class="link-content">
         <div class="link-title">Моя презентація</div>
@@ -653,7 +665,7 @@
       <div class="stat-label">Україна · Іспанія</div>
     </div>
     <div class="stat-card">
-      <div class="stat-number">2</div>
+      <div class="stat-number">3</div>
       <div class="stat-label">Мови роботи</div>
     </div>
   </div>
@@ -663,10 +675,10 @@
     <div class="social-row">
       <a class="social-btn" href="https://instagram.com/iren_lutsenko_career" target="_blank">📸</a>
       <a class="social-btn" href="https://wa.me/380683521151" target="_blank">💬</a>
-      <a class="social-btn" href="/cdn-cgi/l/irenlutsen@gmail.com">✉️</a>
+      <a class="social-btn" href="mailto:irenlutsen@gmail.com">✉️</a>
     </div>
     <div class="footer-text">
-      <span>iren_lutsenko_career</span> · Career coach 
+      <span>iren_lutsenko_career</span> · Career Coach · Канарські острови
     </div>
   </div>
 
@@ -681,10 +693,10 @@
 
     <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 12px; padding: 14px 16px; margin-bottom: 20px;">
       <div style="font-size: 13px; color: #166534; line-height: 1.7;">
-        ✓ &nbsp;30 хвилин<br>
-        ✓ &nbsp;Онлайн <br>
-        ✓ &nbsp;Без тиску <br>
-        ✓ &nbsp;Мови: українська, англійська
+        ✓ &nbsp;30–45 хвилин<br>
+        ✓ &nbsp;Онлайн або офлайн (Канарські острови)<br>
+        ✓ &nbsp;Без тиску та продажу<br>
+        ✓ &nbsp;Мови: українська, англійська, іспанська
       </div>
     </div>
 
@@ -706,7 +718,7 @@
       <div class="package-item" onclick="contactPackage('Старт')">
         <div>
           <div class="package-name">⭐ Пакет «Старт»</div>
-          <div class="package-desc">Консультація + SWOT-аналіз + звіт (60 хв)</div>
+          <div class="package-desc">Консультація + SWOT-аналіз + звіт (60–90 хв)</div>
         </div>
         <div class="package-price">50€</div>
       </div>
@@ -714,7 +726,7 @@
       <div class="package-item" onclick="contactPackage('Кар\'єра')">
         <div>
           <div class="package-name">🏆 Пакет «Кар'єра»</div>
-          <div class="package-desc">SWOT + резюме + 3 вакансії + мотиваційні листи + співбесіда + 2 тижні підтримки</div>
+          <div class="package-desc">SWOT + резюме + 5 вакансій + листи + співбесіда + 2 тижні підтримки</div>
         </div>
         <div class="package-price">150€</div>
       </div>
@@ -722,7 +734,7 @@
       <div class="package-item" onclick="contactPackage('Підлітки')">
         <div>
           <div class="package-name">🎓 Для підлітків</div>
-          <div class="package-desc">Профорієнтація (12-18 р.) + зустріч з батьками</div>
+          <div class="package-desc">Профорієнтація (12–18 р.) + зустріч з батьками</div>
         </div>
         <div class="package-price">60€</div>
       </div>
@@ -732,7 +744,7 @@
   </div>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   function openModal(id) {
     document.getElementById('modal-' + id).classList.add('active');
     document.body.style.overflow = 'hidden';
@@ -743,15 +755,19 @@
     document.body.style.overflow = '';
   }
 
-  function closeModalOutside(e, id) {
-    if (e.target === document.getElementById('modal-' + id)) closeModal(id);
+  function closeModalOutside(e, e2) {
+    if (e.target === e.currentTarget) closeModal(e2);
   }
 
   function goToForm() {
-    // Replace with your actual Google Form link
-    window.open('https://calendly.com/irenlutsen/meet-with-me');
+    window.open('https://calendly.com/irenlutsen/meet-with-me', '_blank');
   }
 
   function contactPackage(pkg) {
-    const phone = '380683521151'; // Replace with actual number (no +)
-    const msg = encodeURIComponent(`Привіт! Мене цікавить Пакет «${pkg}». Х
+    const phone = '380683521151';
+    const msg = encodeURIComponent('Привіт! Мене цікавить Пакет «' + pkg + '». Хотіла б дізнатись більше.');
+    window.open('https://wa.me/' + phone + '?text=' + msg, '_blank');
+  }
+</script>
+</body>
+</html>
