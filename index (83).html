@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Іра Луценко — SWOT + Ікігай для твого кар'єрного напрямку</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Manrope:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FBF6EE;
+    --paper:#FFFFFF;
+    --ink:#1C1912;
+    --ink-soft:#4B4438;
+    --orange:#FF5B1F;
+    --orange-deep:#E14700;
+    --line:#E7DFD0;
+    --olive:#4B5A3A;
+    --sun:#FFD166;
+    --radius:18px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Manrope',sans-serif;
+    font-size:17px;
+    line-height:1.55;
+  }
+  h1,h2,h3,.display{
+    font-family:'Archivo Black',sans-serif;
+    text-transform:uppercase;
+    line-height:1.05;
+    letter-spacing:-0.01em;
+  }
+  .script{font-family:'Caveat',cursive;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px;}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--orange-deep);margin-bottom:14px;
+  }
+  .eyebrow::before{content:"";width:22px;height:2px;background:var(--orange);display:inline-block;}
+
+  /* NAV */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(251,246,238,.92);backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  nav{
+    display:flex;align-items:center;justify-content:space-between;
+    max-width:1120px;margin:0 auto;padding:16px 24px;
+  }
+  .logo{font-family:'Archivo Black',sans-serif;font-size:18px;text-transform:none;}
+  .navlinks{display:flex;gap:28px;font-weight:600;font-size:14.5px;}
+  .navlinks a{opacity:.8;}
+  .navlinks a:hover{opacity:1;color:var(--orange-deep);}
+  .navcta{display:flex;align-items:center;gap:16px;}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    padding:13px 24px;border-radius:100px;font-weight:800;font-size:15px;
+    border:2px solid transparent;cursor:pointer;transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn-primary{background:var(--orange);color:#fff;box-shadow:0 6px 0 var(--orange-deep);}
+  .btn-primary:hover{transform:translateY(-2px);}
+  .btn-primary:active{transform:translateY(2px);box-shadow:0 2px 0 var(--orange-deep);}
+  .btn-ghost{background:transparent;border-color:var(--ink);color:var(--ink);}
+  .btn-ghost:hover{background:var(--ink);color:#fff;}
+  .btn-sm{padding:10px 18px;font-size:13.5px;box-shadow:0 4px 0 var(--orange-deep);}
+  @media(max-width:860px){.navlinks{display:none;}}
+
+  /* HERO */
+  .hero{padding:72px 0 40px;}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;}
+  @media(max-width:860px){
+    .hero-grid{grid-template-columns:1fr;gap:32px;}
+    .hero-photo{max-width:420px;margin:0 auto;}
+  }
+  .hero h1{font-size:clamp(38px,5.2vw,64px);margin:0 0 22px;}
+  .hero h1 .hl{color:var(--orange);}
+  .hero p.lead{font-size:19px;color:var(--ink-soft);max-width:520px;margin:0 0 30px;}
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:40px;}
+  .stats{display:flex;gap:34px;flex-wrap:wrap;}
+  .stat b{display:block;font-family:'Archivo Black';font-size:34px;color:var(--orange-deep);}
+  .stat span{font-size:13.5px;color:var(--ink-soft);font-weight:600;}
+  .hero-photo{position:relative;}
+  .hero-photo img{width:100%;border-radius:26px;display:block;border:6px solid var(--paper);box-shadow:0 20px 50px -20px rgba(28,25,18,.35);}
+  .badge-float{
+    position:absolute;bottom:-18px;left:-18px;background:var(--ink);color:#fff;
+    padding:14px 18px;border-radius:14px;font-size:13.5px;font-weight:700;
+    display:flex;align-items:center;gap:10px;box-shadow:0 10px 24px -10px rgba(0,0,0,.4);
+  }
+  .dot{width:9px;height:9px;border-radius:50%;background:#5BE07A;flex:none;}
+
+  section{padding:76px 0;}
+  .section-head{max-width:640px;margin-bottom:44px;}
+  .section-head h2{font-size:clamp(28px,3.6vw,42px);margin:0 0 14px;}
+  .section-head p{color:var(--ink-soft);font-size:17px;margin:0;}
+
+  /* METHOD */
+  .method{background:var(--ink);color:var(--cream);border-radius:32px;margin:0 24px;padding:64px 40px;}
+  .method .wrap{max-width:1072px;padding:0;}
+  .method .eyebrow{color:var(--sun);}
+  .method .eyebrow::before{background:var(--sun);}
+  .method h2{color:#fff;}
+  .method p.lead{color:#D8D0C0;max-width:640px;}
+  .method-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:rgba(255,255,255,.14);border-radius:20px;overflow:hidden;margin-top:40px;}
+  .method-card{background:#26221A;padding:30px 28px;}
+  .method-card .tag{font-family:'Archivo Black';font-size:13px;color:var(--sun);margin-bottom:10px;display:block;}
+  .method-card h3{color:#fff;font-size:20px;margin:0 0 10px;text-transform:none;font-family:'Manrope';font-weight:800;}
+  .method-card p{color:#C8C0AE;font-size:15px;margin:0;}
+  @media(max-width:720px){.method-grid{grid-template-columns:1fr;}}
+
+  /* WHO FOR */
+  .paths{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+  .path-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:34px;}
+  .path-card .kicker{font-weight:800;color:var(--orange-deep);font-size:13px;text-transform:uppercase;letter-spacing:.05em;}
+  .path-card h3{font-family:'Manrope';font-weight:800;font-size:23px;text-transform:none;margin:10px 0 12px;}
+  .path-card p{color:var(--ink-soft);margin:0 0 18px;}
+  .path-card ul{list-style:none;margin:0 0 22px;padding:0;}
+  .path-card li{position:relative;padding-left:24px;margin-bottom:10px;font-size:15px;}
+  .path-card li::before{content:"✓";position:absolute;left:0;color:var(--orange);font-weight:800;}
+  .note-bar{margin-top:20px;background:#FFF1E3;border:1px dashed var(--orange);border-radius:14px;padding:16px 20px;font-size:14.5px;color:var(--ink-soft);}
+  @media(max-width:760px){.paths{grid-template-columns:1fr;}}
+
+  /* PRICING */
+  .plans{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;align-items:stretch;}
+  .plan{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:26px;display:flex;flex-direction:column;position:relative;}
+  .plan.popular{border-color:var(--orange);box-shadow:0 16px 34px -18px rgba(255,91,31,.45);}
+  .ribbon{position:absolute;top:-13px;left:24px;background:var(--orange);color:#fff;font-size:11.5px;font-weight:800;padding:5px 12px;border-radius:100px;letter-spacing:.03em;}
+  .plan .tagline{font-size:12.5px;font-weight:800;color:var(--orange-deep);text-transform:uppercase;letter-spacing:.05em;}
+  .plan h3{font-family:'Manrope';font-weight:800;font-size:20px;text-transform:none;margin:8px 0 10px;}
+  .plan .desc{font-size:14px;color:var(--ink-soft);margin-bottom:18px;flex-grow:0;}
+  .plan .price{font-family:'Archivo Black';font-size:24px;margin-bottom:2px;}
+  .plan .dur{font-size:13px;color:var(--ink-soft);margin-bottom:16px;}
+  .plan ul{list-style:none;margin:0 0 20px;padding:0;flex-grow:1;}
+  .plan li{position:relative;padding-left:20px;margin-bottom:8px;font-size:13.8px;}
+  .plan li::before{content:"—";position:absolute;left:0;color:var(--orange);}
+  .plan .btn{width:100%;}
+  @media(max-width:980px){.plans{grid-template-columns:1fr 1fr;}}
+  @media(max-width:600px){.plans{grid-template-columns:1fr;}}
+  .plans-note{text-align:center;color:var(--ink-soft);margin-top:30px;font-size:15px;}
+
+  /* FREE CONSULT DEEP DIVE */
+  .consult{background:var(--paper);border:1px solid var(--line);border-radius:28px;padding:48px;display:grid;grid-template-columns:1fr 1fr;gap:44px;}
+  .consult h3{font-family:'Manrope';font-weight:800;text-transform:none;font-size:24px;margin:0 0 16px;}
+  .consult ol{margin:0;padding-left:20px;}
+  .consult ol li{margin-bottom:14px;font-size:15.5px;}
+  .consult ol li b{color:var(--orange-deep);}
+  .case-box{background:var(--cream);border-radius:20px;padding:26px;border-left:4px solid var(--orange);}
+  .case-box .tag{font-size:12px;font-weight:800;text-transform:uppercase;color:var(--orange-deep);letter-spacing:.05em;}
+  .case-box h4{font-family:'Manrope';font-weight:800;text-transform:none;font-size:18px;margin:8px 0 10px;}
+  .case-box p{font-size:14.8px;color:var(--ink-soft);margin:0 0 10px;}
+  .case-box .quote{font-style:italic;font-size:14.5px;border-left:2px solid var(--orange);padding-left:12px;color:var(--ink);}
+  @media(max-width:820px){.consult{grid-template-columns:1fr;padding:32px 24px;}}
+
+  /* CASES */
+  .cases-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:26px;}
+  .case-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:32px;}
+  .case-card .avatar-row{display:flex;align-items:center;gap:14px;margin-bottom:18px;}
+  .avatar{width:52px;height:52px;border-radius:50%;background:var(--orange);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Archivo Black';font-size:18px;flex:none;}
+  .avatar.avatar-photo{padding:0;overflow:hidden;}
+  .avatar.avatar-photo img{width:100%;height:100%;object-fit:cover;object-position:center 15%;}
+  .case-card .who{font-weight:800;font-size:15.5px;}
+  .case-card .who span{display:block;font-weight:600;font-size:13px;color:var(--ink-soft);}
+  .case-card .request{background:#FFF1E3;color:var(--orange-deep);font-weight:700;font-size:12.5px;padding:6px 12px;border-radius:100px;display:inline-block;margin-bottom:16px;}
+  .case-steps{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0;}
+  .case-steps .step{background:var(--cream);border-radius:12px;padding:14px;}
+  .case-steps .step b{display:block;font-size:13px;color:var(--orange-deep);margin-bottom:4px;}
+  .case-steps .step span{font-size:13.5px;color:var(--ink-soft);}
+  .case-result{background:var(--ink);color:#fff;border-radius:14px;padding:18px 20px;margin-top:6px;}
+  .case-result b{color:var(--sun);font-size:13px;text-transform:uppercase;display:block;margin-bottom:8px;}
+  .case-result ul{margin:0;padding-left:18px;font-size:14px;}
+  .case-result li{margin-bottom:5px;}
+  .case-card.placeholder{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;background:repeating-linear-gradient(135deg, var(--cream), var(--cream) 10px, #F3ECDD 10px, #F3ECDD 20px);border-style:dashed;}
+  .case-card.placeholder h4{font-family:'Manrope';font-weight:800;font-size:19px;text-transform:none;margin:0 0 10px;}
+  .case-card.placeholder p{color:var(--ink-soft);font-size:14.5px;margin:0 0 18px;}
+  @media(max-width:900px){.cases-grid{grid-template-columns:1fr;}}
+
+  /* ABOUT */
+  .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:52px;align-items:start;}
+  .about-photo{position:relative;}
+  .about-photo img{width:100%;border-radius:24px;}
+  .tag-cloud{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;}
+  .tag-pill{background:var(--paper);border:1px solid var(--line);padding:7px 14px;border-radius:100px;font-size:12.5px;font-weight:700;}
+  .about-list{list-style:none;margin:0 0 30px;padding:0;}
+  .about-list li{border-bottom:1px solid var(--line);padding:18px 0;display:flex;gap:16px;}
+  .about-list .num{font-family:'Archivo Black';color:var(--orange);font-size:20px;flex:none;width:34px;}
+  .about-list b{display:block;font-size:16px;margin-bottom:4px;}
+  .about-list span{font-size:14.5px;color:var(--ink-soft);}
+  .about-quote{background:var(--paper);border-left:4px solid var(--orange);border-radius:14px;padding:22px 26px;font-size:16px;color:var(--ink-soft);margin-top:8px;}
+  @media(max-width:860px){.about-grid{grid-template-columns:1fr;}}
+
+  /* UK BLOCK */
+  .uk-block{background:linear-gradient(135deg,#EFE7D6,#FBF6EE);border:1px solid var(--line);border-radius:28px;padding:48px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;}
+  .uk-steps{display:flex;flex-direction:column;gap:16px;}
+  .uk-step{display:flex;gap:14px;align-items:flex-start;}
+  .uk-num{font-family:'Archivo Black';color:#fff;background:var(--olive);width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;flex:none;}
+  @media(max-width:860px){.uk-block{grid-template-columns:1fr;padding:32px 24px;}}
+
+  /* TESTIMONIALS */
+  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .testi{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:28px;}
+  .testi p{font-style:italic;font-size:15px;margin:0 0 18px;}
+  .testi .who b{display:block;font-size:14.5px;}
+  .testi .who span{font-size:12.5px;color:var(--ink-soft);}
+  @media(max-width:900px){.testi-grid{grid-template-columns:1fr;}}
+
+  /* FINAL CTA */
+  .final{background:var(--ink);color:#fff;border-radius:32px;margin:0 24px;padding:64px 40px;text-align:center;}
+  .final h2{color:#fff;font-size:clamp(30px,4.4vw,46px);}
+  .final p{color:#D8D0C0;max-width:520px;margin:16px auto 32px;font-size:17px;}
+  .final .btn-primary{box-shadow:0 6px 0 #B33200;}
+
+  footer{padding:40px 0;text-align:center;color:var(--ink-soft);font-size:13.5px;}
+  footer .flinks{display:flex;justify-content:center;gap:20px;margin-bottom:12px;font-weight:700;}
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo">Іра Луценко</div>
+    <div class="navlinks">
+      <a href="#method">Методика</a>
+      <a href="#products">Послуги</a>
+      <a href="#cases">Кейси</a>
+      <a href="#about">Про мене</a>
+    </div>
+    <div class="navcta">
+      <a class="btn btn-primary btn-sm" href="https://t.me/IrenLutsenko?text=Хочу%20безкоштовну%20консультацію">Консультація</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">SWOT-аналіз особистості · Техніка ікігай</div>
+      <h1>Знайди свій <span class="hl">кар'єрний</span> напрямок</h1>
+      <p class="lead">Допомагаю підліткам і дорослим визначити покликання через SWOT-аналіз особистості та техніку ікігай — без тестів з інтернету та загальних порад.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="https://t.me/IrenLutsenko?text=Хочу%20безкоштовну%20консультацію">Безкоштовна консультація 30 хв</a>
+        <a class="btn btn-ghost" href="#method">Як це працює</a>
+      </div>
+      <p style="font-size:14px;color:var(--ink-soft);margin:-16px 0 30px;">Записався(-лась)? За день до консультації <a href="https://forms.gle/hFwPuHmvpeJwMTTB7" target="_blank" style="color:var(--orange-deep);font-weight:700;text-decoration:underline;">заповни коротку анкету →</a></p>
+      <div class="stats">
+        <div class="stat"><b>12+</b><span>професій змінила</span></div>
+        <div class="stat"><b>20+</b><span>років роботи з людьми</span></div>
+        <div class="stat"><b>7 міс.</b><span>бізнес-стажування на Канарах, Erasmus for Young Entrepreneurs</span></div>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="ira.jpg" alt="Іра Луценко">
+      <div class="badge-float"><span class="dot"></span> Приймаю запити на консультації</div>
+    </div>
+  </div>
+</section>
+
+<section class="method" id="method">
+  <div class="wrap">
+    <div class="eyebrow">Методика</div>
+    <h2>SWOT-аналіз особистості + техніка ікігай</h2>
+    <p class="lead">Це не "чарівна таблетка" і не тест з інтернету. Це два інструменти, які я поєдную на сесії, щоб ти сам(а) прийшов(ла) до відповіді — я лише тримаю дзеркало.</p>
+    <div class="method-grid">
+      <div class="method-card">
+        <span class="tag">Крок 1</span>
+        <h3>SWOT особистості</h3>
+        <p>Сильні сторони, зони росту, можливості та ризики — не бізнесу, а саме тебе.</p>
+      </div>
+      <div class="method-card">
+        <span class="tag">Крок 2</span>
+        <h3>Ікігай</h3>
+        <p>Перетин того, що любиш, вмієш, що потрібне світу і що приносить дохід.</p>
+      </div>
+      <div class="method-card">
+        <span class="tag">Крок 3</span>
+        <h3>Точка перетину</h3>
+        <p>Вектор, де твій потенціал зустрічається з ринком і твоїм покликанням.</p>
+      </div>
+      <div class="method-card">
+        <span class="tag">Крок 4</span>
+        <h3>Персональна карта</h3>
+        <p>Місія однією фразою і 2–3 конкретні кроки з дедлайнами — не "розберися", а "зроби це до п'ятниці".</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="who">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Для кого</div>
+      <h2>Обери свій шлях</h2>
+      <p>SWOT-аналіз особистості та техніка ікігай адаптуються під різний вік і ситуацію.</p>
+    </div>
+    <div class="paths">
+      <div class="path-card">
+        <div class="kicker">Підлітки 16+</div>
+        <h3>Обираєш перший шлях?</h3>
+        <p>Вступаєш до університету, але не знаєш куди? Разом знайдемо твої сильні сторони й справжні інтереси.</p>
+        <ul>
+          <li>Зрозуміти свої таланти та суперсили</li>
+          <li>Знайти напрямок без тиску від батьків</li>
+          <li>Отримати конкретний план на 2–3 роки</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://t.me/IrenLutsenko?text=Хочу%20консультацію%20для%20підлітка">Записатись →</a>
+      </div>
+      <div class="path-card">
+        <div class="kicker">Дорослі</div>
+        <h3>Змінюєш напрямок?</h3>
+        <p>Відчуваєш вигорання або хочеш змінити сферу? Зміна кар'єри — це не криза, це точка зростання.</p>
+        <ul>
+          <li>Вийти з вигорання та знайти нову точку опори</li>
+          <li>Переосмислити досвід і побачити його цінність</li>
+          <li>Скласти реалістичний план переходу</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://t.me/IrenLutsenko?text=Хочу%20консультацію%20для%20дорослих">Записатись →</a>
+      </div>
+    </div>
+    <div class="note-bar">Батьки підлітків — окремий формат «Батьки + Підліток»: спільна сесія без конфліктів.</div>
+  </div>
+</section>
+
+<section id="products">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Послуги та ціни</div>
+      <h2>Обери свій формат</h2>
+      <p>Все починається з безкоштовного знайомства. В кожному пакеті є базова частина і персональний бонус — під твою конкретну ситуацію.</p>
+    </div>
+    <div class="plans">
+      <div class="plan">
+        <div class="tagline">Старт · Безкоштовно</div>
+        <h3>Безкоштовна консультація</h3>
+        <div class="desc">30 хвилин, де ми розбираємо твою ситуацію і визначаємо формат роботи.</div>
+        <div class="price">Безкоштовно</div>
+        <div class="dur">30 хвилин · онлайн</div>
+        <ul>
+          <li>Аналіз твоєї ситуації</li>
+          <li>Пояснення методики SWOT + ікігай</li>
+          <li>Відповіді на питання</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://t.me/IrenLutsenko?text=Хочу%20безкоштовну%20консультацію">Записатись</a>
+      </div>
+
+      <div class="plan">
+        <div class="tagline">Готовий документ</div>
+        <h3>Створення резюме</h3>
+        <div class="desc">Резюме, яке показує твою цінність — на основі того, що ми зʼясуємо про твої сильні сторони.</div>
+        <div class="price">390 грн</div>
+        <div class="dur">Готове резюме · PDF + Word</div>
+        <ul>
+          <li>Структура під ATS та рекрутера</li>
+          <li>Акценти на твоїх сильних сторонах</li>
+          <li>1 раунд правок</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://t.me/IrenLutsenko?text=Хочу%20замовити%20резюме">Замовити</a>
+      </div>
+
+      <div class="plan popular">
+        <span class="ribbon">Популярний вибір</span>
+        <div class="tagline">Основний пакет</div>
+        <h3>Кар'єрний Компас</h3>
+        <div class="desc">Глибока індивідуальна сесія: SWOT + ікігай + персональна карта + план дій.</div>
+        <div class="price">1 500 грн</div>
+        <div class="dur">90 хвилин</div>
+        <ul>
+          <li>SWOT-аналіз + ікігай</li>
+          <li>Персональна карта напрямку</li>
+          <li>Перевірка домашніх завдань</li>
+          <li>Тиждень підтримки у чаті</li>
+        </ul>
+        <a class="btn btn-primary" href="https://t.me/IrenLutsenko?text=Хочу%20сесію%20Кар'єрний%20Компас">Записатись</a>
+      </div>
+
+      <div class="plan">
+        <div class="tagline">Поглиблена робота</div>
+        <h3>Повний вектор розвитку</h3>
+        <div class="desc">3 сесії з супроводом до першого результату, плюс реальна допомога зі запуском.</div>
+        <div class="price">3 900 грн</div>
+        <div class="dur">3 сесії</div>
+        <ul>
+          <li>Все з пакету «Кар'єрний Компас»</li>
+          <li>Лендінг або маркетингова стратегія</li>
+          <li>Підтримка між сесіями</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://t.me/IrenLutsenko?text=Хочу%20програму%20Повний%20вектор">Дізнатись більше</a>
+      </div>
+    </div>
+    <p class="plans-note">Не знаєш що обрати? Починай з безкоштовної консультації — разом визначимось.</p>
+  </div>
+</section>
+
+<section id="free-consult">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Що саме відбувається</div>
+      <h2>Що ти отримаєш за 30 хвилин</h2>
+      <p>Це не "загальна ознайомча розмова". За один безкоштовний дзвінок ти йдеш з конкретним результатом — ось приклад реальної сесії.</p>
+    </div>
+    <div class="consult">
+      <div>
+        <h3>Що відбувається на дзвінку</h3>
+        <ol>
+          <li><b>За день до консультації заповнюєш коротку анкету.</b> Кілька питань наперед, щоб я підготувалась саме до твоєї ситуації — <a href="https://forms.gle/hFwPuHmvpeJwMTTB7" target="_blank" style="color:var(--orange-deep);font-weight:700;">заповнити анкету →</a></li>
+          <li><b>Розбираємо твій запит.</b> Не загальні питання "ким хочеш бути", а конкретна ситуація: досвід, страхи, що вже пробував(ла).</li>
+          <li><b>Пробуємо перший блок SWOT + ікігай.</b> За 30 хвилин встигаємо зачепити 1–2 квадранти — ти вже побачиш дещо нове про себе.</li>
+          <li><b>Отримуєш чесну оцінку ситуації.</b> Чи справді бракує знань, чи — як часто буває — це страх, який заважає зробити перший крок.</li>
+          <li><b>Йдеш з наступним кроком.</b> Навіть якщо не продовжимо співпрацю — ти вийдеш із дзвінка з розумінням, що робити далі.</li>
+        </ol>
+      </div>
+      <div class="case-box">
+        <span class="tag">Реальний кейс</span>
+        <h4>Лілія, 45 років — вихователь і душеопікун</h4>
+        <p>Прийшла з запитом «хочу монетизувати навички і почати власну практику», але без диплома і зі страхом брати гроші за роботу.</p>
+        <p>За 30 хвилин безкоштовної сесії ми зібрали SWOT, заповнили чотири кола ікігай, сформулювали місію одним реченням — її ж словами — і поставили три кроки з дедлайнами.</p>
+        <p class="quote">«Я й не думала, що все це вже є у мене — просто ніколи не дивилася на себе так»</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cases">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Кейси</div>
+      <h2>Як це виглядає на практиці</h2>
+      <p>Реальні запити, реальні сесії, реальний результат — без прикрас.</p>
+    </div>
+    <div class="cases-grid">
+      <div class="case-card">
+        <div class="avatar-row">
+          <div class="avatar avatar-photo"><img src="liliya.jpg" alt="Лілія"></div>
+          <div class="who">Лілія, 45 років<span>Вихователь у садочку і душеопікун</span></div>
+        </div>
+        <div class="request">Запит: монетизувати навички і почати власну практику</div>
+        <p>Багато років поруч з дітьми і батьками, пройдений курс душеопікунства — і нуль платних клієнтів, бо страшно брати за це гроші. Звичний сценарій: «ще один курс» замість першого кроку.</p>
+        <div class="case-steps">
+          <div class="step"><b>Точка А</b><span>«Знаю, що хочу допомагати людям. Але страшно... не знаю з чого починати»</span></div>
+          <div class="step"><b>Що побачили</b><span>Проблема не у відсутності знань — у страху. Ринок вже відповів: їй платили і цінували її роботу</span></div>
+        </div>
+        <div class="case-result">
+          <b>Результат за 30 хв</b>
+          <ul>
+            <li>Чіткий напрямок і місія — сформульовані, а не «у голові»</li>
+            <li>4 конкретні напрямки, де може заробляти вже зараз</li>
+            <li>Особиста SWOT + ікігай карта у PDF з домашніми завданнями</li>
+            <li>Перший пост в Instagram — написали разом</li>
+          </ul>
+        </div>
+      </div>
+      <div class="case-card placeholder">
+        <h4>Твій кейс — наступний?</h4>
+        <p>Кожна сесія — це нова історія. Після твоєї консультації тут з'явиться і твій результат (за бажанням, анонімно).</p>
+        <a class="btn btn-primary btn-sm" href="https://t.me/IrenLutsenko?text=Хочу%20безкоштовну%20консультацію">Почати свій кейс →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about-grid">
+    <div>
+      <div class="about-photo">
+        <img src="ira-about.png" alt="Іра Луценко">
+      </div>
+    </div>
+    <div>
+      <div class="eyebrow">Про мене</div>
+      <h2>Я теж шукала свій напрямок</h2>
+      <ul class="about-list">
+        <li>
+          <span class="num">01</span>
+          <div><b>12+ професій змінила</b><span>Туризм, реклама, IT, НГО, міжнародні партнерства</span></div>
+        </li>
+        <li>
+          <span class="num">02</span>
+          <div><b>7 місяців на Тенерифе</b><span>Бізнес-стажування на Канарах по програмі Erasmus for Young Entrepreneurs</span></div>
+        </li>
+        <li>
+          <span class="num">03</span>
+          <div><b>Директор з розвитку · «Hope – children of Ukraine»</b><span>Координувала гуманітарну допомогу сім'ям загиблих захисників</span></div>
+        </li>
+        <li>
+          <span class="num">04</span>
+          <div><b>Радник іспанської асоціації «Дві землі, два сонця»</b><span>Волонтерська консультативна робота в асоціації</span></div>
+        </li>
+        <li>
+          <span class="num">05</span>
+          <div><b>Консультую з вступу до університетів Великобританії</b><span>Окремий напрямок — допомога українцям із вступом за програмою Homes for Ukraine</span></div>
+        </li>
+      </ul>
+      <p>Я знаю, що таке — не розуміти, чого ти хочеш. Я пройшла через 12 кардинально різних сфер. І саме це дало мені унікальне бачення.</p>
+      <p>Коли у 2022 році я залишилась в Україні, почала пакувати гуманітарку і координувати допомогу. Поступово волонтерство переросло в місію.</p>
+      <div class="about-quote">«Як зрозуміти, чого я справді хочу?» — це питання мені ставили роками. Саме з нього народився підхід SWOT + ікігай, який я тепер використовую на кожній сесії.</div>
+    </div>
+  </div>
+</section>
+
+<section id="uk">
+  <div class="wrap">
+    <div class="uk-block">
+      <div>
+        <div class="eyebrow">Додаткова можливість</div>
+        <h2>Безкоштовне навчання у Великобританії</h2>
+        <p style="color:var(--ink-soft);margin:14px 0 24px;">Допомагаю українцям вступити до університетів Великобританії безкоштовно за програмою <b>Homes for Ukraine</b>. Це не я навчалась у Великобританії — я допомагаю вступити туди тобі.</p>
+        <a class="btn btn-primary" href="https://t.me/IrenLutsenko?text=Цікавить%20навчання%20в%20Великобританії">Дізнатись докладніше →</a>
+      </div>
+      <div class="uk-steps">
+        <div class="uk-step"><div class="uk-num">1</div><div>Консультація: оцінюємо ситуацію та підходящі програми</div></div>
+        <div class="uk-step"><div class="uk-num">2</div><div>Підготовка документів і подача заявки в університет</div></div>
+        <div class="uk-step"><div class="uk-num">3</div><div>Підтримка на всіх етапах — від вибору до офера</div></div>
+        <div class="uk-step"><div class="uk-num">4</div><div>Підготовка до переїзду та адаптації</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Відгуки</div>
+      <h2>Що кажуть клієнти</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi">
+        <p>«Я 3 роки не могла вирішити, куди вступати. Після сесії з Ірою все стало на своє місце. Вона не нав'язала думку — допомогла почути саму себе.»</p>
+        <div class="who"><b>Марія, 17 років</b><span>Учениця 11 класу, Київ</span></div>
+      </div>
+      <div class="testi">
+        <p>«10 років в маркетингу, і я повністю вигоріла. Після роботи з Ірою не просто знайшла новий напрямок — відчула себе собою знову.»</p>
+        <div class="who"><b>Оксана, 34 роки</b><span>Маркетологиня у переході, Львів</span></div>
+      </div>
+      <div class="testi">
+        <p>«Ми з сином прийшли разом. Формат "Батьки + Підліток" просто ідеальний. Перший раз говорили про його майбутнє без конфліктів.»</p>
+        <div class="who"><b>Тетяна, мама Дениса, 16 р.</b><span>Спільна сесія, Київ</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cta">
+  <div class="wrap">
+    <div class="final">
+      <div class="eyebrow" style="color:var(--sun);">Готова почати?</div>
+      <h2>Знайди свій напрямок</h2>
+      <p>Починаємо з безкоштовної 30-хвилинної консультації. Без зобов'язань — просто розберемось разом.</p>
+      <a class="btn btn-primary" href="https://t.me/IrenLutsenko?text=Хочу%20безкоштовну%20консультацію">Записатись безкоштовно</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="flinks">
+    <a href="https://www.instagram.com/">Instagram</a>
+    <a href="https://t.me/IrenLutsenko">Telegram</a>
+  </div>
+  © 2025 Іра Луценко — SWOT-аналіз особистості та техніка ікігай
+</footer>
+
+</body>
+</html>
