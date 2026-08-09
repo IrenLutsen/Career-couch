@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ірина Луценко — кар'єрна коучка для жінок 35+ | Подолання вікового упередження</title>
+<meta name="description" content="Індивідуальне менторство для жінок 35+: перекодуй вік і кар'єрну перерву в актив і отримай підвищення, нову роль чи впевнене повернення в кар'єру за 3–6 місяців. СЕО Womafreesm.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,800&family=Inter:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FBF6EE;
+    --paper:#FFFFFF;
+    --ink:#1C1912;
+    --ink-soft:#4B4438;
+    --orange:#FF5B1F;
+    --orange-deep:#E14700;
+    --line:#E7DFD0;
+    --olive:#4B5A3A;
+    --sun:#FFD166;
+    --orange-pale:#FFF1E3;
+    --radius:18px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--cream);color:var(--ink);font-family:'Inter',sans-serif;font-size:19px;line-height:1.62;}
+  h1,h2,h3,.display{font-family:'Fraunces',serif;font-weight:700;text-transform:none;line-height:1.12;letter-spacing:-0.01em;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px;}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--orange-deep);margin-bottom:14px;}
+  .eyebrow::before{content:"";width:22px;height:2px;background:var(--orange);display:inline-block;}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(251,246,238,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);}
+  nav{display:flex;align-items:center;justify-content:space-between;max-width:1120px;margin:0 auto;padding:16px 24px;}
+  .logo{font-family:'Fraunces',serif;font-weight:700;font-size:19px;text-transform:none;}
+  .navlinks{display:flex;gap:28px;font-weight:600;font-size:14.5px;}
+  .navlinks a{opacity:.8;}
+  .navlinks a:hover{opacity:1;color:var(--orange-deep);}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 24px;border-radius:100px;font-weight:800;font-size:15px;border:2px solid transparent;cursor:pointer;transition:transform .15s ease, box-shadow .15s ease;}
+  .btn-primary{background:var(--orange);color:#fff;box-shadow:0 6px 0 var(--orange-deep);}
+  .btn-primary:hover{transform:translateY(-2px);}
+  .btn-primary:active{transform:translateY(2px);box-shadow:0 2px 0 var(--orange-deep);}
+  .btn-ghost{background:transparent;border-color:var(--ink);color:var(--ink);}
+  .btn-ghost:hover{background:var(--ink);color:#fff;}
+  .btn-sm{padding:10px 18px;font-size:13.5px;box-shadow:0 4px 0 var(--orange-deep);}
+  @media(max-width:860px){.navlinks{display:none;}}
+
+  /* 1. HERO / HOOK */
+  .hero{padding:64px 0 40px;}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;}
+  @media(max-width:860px){.hero-grid{grid-template-columns:1fr;gap:32px;}.hero-photo{max-width:420px;margin:0 auto;}}
+  .hero h1{font-size:clamp(32px,4.4vw,54px);margin:0 0 18px;}
+  .hero h1 .hl{color:var(--orange);}
+  .hero p.sub{font-size:18px;color:var(--ink-soft);max-width:540px;margin:0 0 10px;font-weight:600;}
+  .hero p.lead{font-size:17px;color:var(--ink-soft);max-width:540px;margin:0 0 26px;}
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:16px;}
+  .hero-micro{font-size:13.5px;color:var(--ink-soft);}
+  .hero-photo{position:relative;}
+  .hero-photo img{width:100%;border-radius:26px;display:block;border:6px solid var(--paper);box-shadow:0 20px 50px -20px rgba(28,25,18,.35);}
+  .badge-float{position:absolute;bottom:-18px;left:-18px;background:var(--ink);color:#fff;padding:14px 18px;border-radius:14px;font-size:13px;font-weight:700;display:flex;align-items:center;gap:10px;box-shadow:0 10px 24px -10px rgba(0,0,0,.4);max-width:260px;}
+  .dot{width:9px;height:9px;border-radius:50%;background:#5BE07A;flex:none;}
+
+  section{padding:72px 0;}
+  .section-head{max-width:680px;margin-bottom:40px;}
+  .section-head h2{font-size:clamp(27px,3.4vw,40px);margin:0 0 14px;}
+  .section-head p{color:var(--ink-soft);font-size:17px;margin:0;}
+
+  /* 2. PAIN */
+  .pain-section{background:var(--orange-pale, #FFF1E3);border-radius:32px;margin:0 24px;padding:60px 40px;color:var(--ink);}
+  .pain-section .wrap{max-width:1000px;padding:0;}
+  .pain-list{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:32px;}
+  .pain-item{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:22px 24px;display:flex;gap:12px;align-items:flex-start;}
+  .pain-item .x{color:var(--orange-deep);font-family:'Fraunces',serif;font-weight:700;font-size:19px;flex:none;}
+  .pain-item p{margin:0;color:var(--ink);font-size:17px;font-style:italic;}
+  @media(max-width:720px){.pain-list{grid-template-columns:1fr;}}
+
+  /* 6. FOR / NOT FOR */
+  .forwhom{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+  .fw-card{border-radius:var(--radius);padding:30px;}
+  .fw-card.yes{background:#FFF1E3;border:1px solid var(--orange);}
+  .fw-card.no{background:var(--paper);border:1px solid var(--line);}
+  .fw-card h3{font-family:'Fraunces',serif;font-weight:700;text-transform:none;font-size:20px;margin:0 0 16px;}
+  .fw-card ul{list-style:none;margin:0;padding:0;}
+  .fw-card li{position:relative;padding-left:26px;margin-bottom:10px;font-size:15px;color:var(--ink-soft);}
+  .fw-card.yes li::before{content:"✓";position:absolute;left:0;color:var(--orange-deep);font-weight:800;}
+  .fw-card.no li::before{content:"✕";position:absolute;left:0;color:#A99A85;font-weight:800;}
+  @media(max-width:720px){.forwhom{grid-template-columns:1fr;}}
+
+  /* 3+4. SOLUTION / WHAT'S INCLUDED */
+  .offer-block{background:var(--paper);border:1px solid var(--line);border-radius:28px;padding:44px;}
+  .offer-head{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:20px;border-bottom:1px solid var(--line);padding-bottom:26px;margin-bottom:30px;}
+  .offer-head .tagline{font-size:12.5px;font-weight:800;color:var(--orange-deep);text-transform:uppercase;letter-spacing:.05em;display:block;margin-bottom:8px;}
+  .offer-head h3{font-family:'Fraunces',serif;font-weight:700;text-transform:none;font-size:27px;margin:0 0 8px;}
+  .offer-head p{color:var(--ink-soft);margin:0;max-width:520px;font-size:15.5px;}
+  .offer-price{text-align:right;}
+  .offer-price .price{font-family:'Fraunces',serif;font-weight:700;font-size:32px;color:var(--orange-deep);}
+  .offer-price .dur{font-size:13px;color:var(--ink-soft);}
+  .includes-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .includes-item{display:flex;gap:14px;background:var(--cream);border-radius:14px;padding:18px 20px;}
+  .includes-item .n{font-family:'Fraunces',serif;font-weight:700;color:var(--orange);font-size:19px;flex:none;width:26px;}
+  .includes-item b{display:block;font-size:15px;margin-bottom:3px;}
+  .includes-item span{font-size:13.8px;color:var(--ink-soft);}
+  @media(max-width:720px){.includes-grid{grid-template-columns:1fr;}.offer-price{text-align:left;}}
+
+  .altplan{background:var(--cream);border:1px dashed var(--orange);border-radius:20px;padding:26px 28px;margin-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+  .altplan div b{display:block;font-size:16px;}
+  .altplan div span{font-size:13.8px;color:var(--ink-soft);}
+  .altplan .price{font-family:'Fraunces',serif;font-weight:700;color:var(--orange-deep);font-size:21px;}
+
+  /* 5. RESULT */
+  .results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  .result-card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:26px;}
+  .result-card .ico{font-family:'Fraunces',serif;font-weight:700;color:var(--orange);font-size:23px;display:block;margin-bottom:10px;}
+  .result-card p{margin:0;font-size:15.5px;color:var(--ink);}
+  @media(max-width:900px){.results-grid{grid-template-columns:1fr;}}
+
+  /* 7. ABOUT */
+  .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:52px;align-items:center;}
+  .about-photo img{width:100%;border-radius:24px;}
+  .about-grid p{color:var(--ink-soft);font-size:16.5px;margin:0 0 16px;}
+  .about-quote{background:var(--paper);border-left:4px solid var(--orange);border-radius:14px;padding:22px 26px;font-size:16px;color:var(--ink-soft);margin-top:8px;}
+  .credchips{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 22px;}
+  .credchip{background:var(--paper);border:1px solid var(--line);padding:8px 14px;border-radius:100px;font-size:12.5px;font-weight:700;}
+  .credchip a{color:var(--orange-deep);}
+  .about-quotes{list-style:none;margin:0 0 18px;padding:0;}
+  .about-quotes li{font-style:italic;font-size:16px;color:var(--ink-soft);border-left:3px solid var(--orange);padding:6px 0 6px 16px;margin-bottom:10px;}
+  @media(max-width:860px){.about-grid{grid-template-columns:1fr;}}
+
+  /* 8. CASES */
+  .cases-list{display:flex;flex-direction:column;gap:20px;}
+  .case-box{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:32px 36px;}
+  .case-tag{font-size:13px;font-weight:800;text-transform:uppercase;color:var(--orange-deep);letter-spacing:.04em;}
+  .case-cols{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin:16px 0 18px;}
+  .case-cols .col b{display:block;font-size:14px;color:var(--orange-deep);text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px;}
+  .case-cols .col p{margin:0;font-size:16.5px;color:var(--ink-soft);}
+  .case-insight{margin:0;font-size:15.5px;font-style:italic;color:var(--ink);border-top:1px solid var(--line);padding-top:16px;}
+  @media(max-width:640px){.case-cols{grid-template-columns:1fr;gap:16px;}}
+
+  /* 9. FAQ */
+  .faq{max-width:820px;}
+  .faq-item{border-bottom:1px solid var(--line);padding:20px 0;}
+  .faq-item summary{cursor:pointer;font-weight:800;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;}
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary::after{content:"+";font-family:'Fraunces',serif;font-weight:700;color:var(--orange);font-size:21px;flex:none;}
+  .faq-item[open] summary::after{content:"–";}
+  .faq-item p{color:var(--ink-soft);margin:12px 0 0;font-size:15.5px;}
+
+  /* 10. FINAL CTA */
+  .final{background:var(--orange-pale);border:2px solid var(--orange);border-radius:32px;margin:0 24px;padding:64px 40px;text-align:center;}
+  .final h2{color:var(--ink);font-size:clamp(28px,4vw,44px);}
+  .final p{color:var(--ink-soft);max-width:560px;margin:16px auto 32px;font-size:18px;}
+  .final .micro{color:var(--ink-soft);font-size:14px;margin-top:16px;}
+  .final .micro a{color:var(--orange-deep);font-weight:700;text-decoration:underline;}
+
+  /* CHALLENGE BANNER */
+  .challenge-banner{background:var(--ink);border-radius:28px;margin:0 24px;padding:40px 44px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;}
+  .challenge-banner .ctext{color:var(--cream);}
+  .challenge-banner .ctag{color:var(--sun);font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:.06em;display:block;margin-bottom:8px;}
+  .challenge-banner h3{color:#fff;font-size:24px;margin:0 0 8px;}
+  .challenge-banner p{color:#D8D0C0;margin:0;font-size:16px;max-width:440px;}
+  @media(max-width:720px){.challenge-banner{padding:32px 28px;text-align:center;justify-content:center;}.challenge-banner p{margin:0 auto;}}
+
+  /* PHOTO GALLERY */
+  .photo-strip{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+  .photo-strip img{width:100%;border-radius:20px;display:block;aspect-ratio:4/5;object-fit:cover;}
+  @media(max-width:640px){.photo-strip{grid-template-columns:1fr;}}
+
+  footer{padding:40px 0;text-align:center;color:var(--ink-soft);font-size:13.5px;}
+  footer .flinks{display:flex;justify-content:center;gap:20px;margin-bottom:12px;font-weight:700;flex-wrap:wrap;}
+  footer .fnote{max-width:520px;margin:0 auto 14px;font-size:12.5px;}
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo">Ірина Луценко</div>
+    <div class="navlinks">
+      <a href="#offer">Менторство</a>
+      <a href="#challenge">Челендж</a>
+      <a href="#for">Для кого</a>
+      <a href="#about">Про мене</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a class="btn btn-primary btn-sm" href="https://t.me/IrenLutsenko?text=Хочу%20безкоштовну%20консультацію">Консультація</a>
+  </nav>
+</header>
+
+<!-- 1. HOOK / HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Кар'єрна коучка для жінок 35+</div>
+      <h1>Перестань боятись власного віку й кар'єрної перерви в резюме — <span class="hl">і знову стань помітною</span></h1>
+      <p class="sub">Отримай конкретний план, як стати помітною, впевненою і затребуваною на ринку праці — замість чергової поради «просто повір у себе».</p>
+      <p class="lead">Для жінок 35+, які відчувають, що на роботі, на співбесіді чи після перерви в кар'єрі їх перестали помічати.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="https://t.me/IrenLutsenko?text=Хочу%20безкоштовну%20консультацію">Записатись на безкоштовний дзвінок</a>
+      </div>
+      <p class="hero-micro">30 хвилин · онлайн · без зобов'язань</p>
+    </div>
+    <div class="hero-photo">
+      <img src="ira-hero-glasses.jpg" alt="Ірина Луценко">
+      <div class="badge-float"><span class="dot"></span> CEO Womafreesm · приймаю запити на менторство</div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. PAIN -->
+<section id="pain">
+  <div class="pain-section">
+    <div class="wrap">
+      <div class="eyebrow">Чи впізнаєш себе?</div>
+      <h2>Це не «просто настрій». Це патерн, який має ім'я</h2>
+      <div class="pain-list">
+        <div class="pain-item"><span class="x">✕</span><p>Мене перестали помічати на роботі, хоча я роблю все так само добре</p></div>
+        <div class="pain-item"><span class="x">✕</span><p>Боюсь співбесіди — не знаю, як пояснити перерву в кар'єрі, щоб не звучало як виправдання</p></div>
+        <div class="pain-item"><span class="x">✕</span><p>Дивлюсь на вакансії і думаю: а візьмуть мене взагалі, чи відсіють через вік</p></div>
+        <div class="pain-item"><span class="x">✕</span><p>Молодші колеги впевненіші, хоча в мене набагато більше досвіду</p></div>
+        <div class="pain-item"><span class="x">✕</span><p>Страшно, що ШІ-скринінг відсіє резюме ще до того, як хтось живий мене побачить</p></div>
+        <div class="pain-item"><span class="x">✕</span><p>Мені тисячу разів казали «будь впевненою». Ніхто не сказав, ЩО конкретно робити</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHALLENGE BANNER -->
+<section id="challenge" style="padding-top:0;">
+  <div class="wrap">
+    <div class="challenge-banner">
+      <div class="ctext">
+        <span class="ctag">Легкий перший крок</span>
+        <h3>Челендж «Видима і впевнена»</h3>
+        <p>21 день, одне завдання щодня — переформулюй досвід і кар'єрну перерву з мінусу на перевагу. €100, місць 10.</p>
+      </div>
+      <a class="btn btn-primary" href="https://irenlutsen.github.io/21-day/" target="_blank">Дізнатись більше →</a>
+    </div>
+  </div>
+</section>
+
+<!-- 3+4. SOLUTION + WHAT'S INCLUDED -->
+<section id="offer">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Рішення</div>
+      <h2>Кар'єрний Компас — індивідуальне менторство</h2>
+      <p>Не курс і не тест з інтернету. Особиста робота зі мною: спочатку діагностуємо, де саме спрацьовує вікове упередження, потім будуємо план, який перекодовує це в перевагу.</p>
+    </div>
+
+    <div class="offer-block">
+      <div class="offer-head">
+        <div>
+          <span class="tagline">Флагманський формат</span>
+          <h3>Індивідуальне менторство</h3>
+          <p>Персональна робота зі мною особисто — від діагностики упередження до першого підвищення, офера чи впевненого повернення в кар'єру.</p>
+        </div>
+        <div class="offer-price">
+          <div class="price">€300 / міс</div>
+          <div class="dur">рекомендовано від 3 місяців</div>
+        </div>
+      </div>
+
+      <div class="includes-grid">
+        <div class="includes-item"><span class="n">01</span><div><b>Діагностика упередження</b><span>Де саме в резюме, LinkedIn і самопрезентації спрацьовує «вікове» сприйняття</span></div></div>
+        <div class="includes-item"><span class="n">02</span><div><b>SWOT + Ікігай сесія</b><span>Сильні сторони, зони росту, перетин навичок, цінності ринку і твого досвіду</span></div></div>
+        <div class="includes-item"><span class="n">03</span><div><b>Аудит резюме й LinkedIn</b><span>Перекодування кар'єрної перерви й віку з «недоліку» на аргумент, який працює на тебе</span></div></div>
+        <div class="includes-item"><span class="n">04</span><div><b>Підготовка до співбесід і переговорів</b><span>Мова, аргументи, впевнена позиція на розмові про підвищення чи нову роль</span></div></div>
+        <div class="includes-item"><span class="n">05</span><div><b>Щотижневі сесії</b><span>Регулярний ритм, а не разова консультація без продовження</span></div></div>
+        <div class="includes-item"><span class="n">06</span><div><b>Підтримка між сесіями</b><span>Питання й перевірка кроків у чаті, а не тиша до наступної зустрічі</span></div></div>
+      </div>
+
+      <div style="margin-top:28px;">
+        <a class="btn btn-primary" href="https://t.me/IrenLutsenko?text=Хочу%20індивідуальне%20менторство">Записатись на менторство →</a>
+      </div>
+    </div>
+
+    <div class="altplan">
+      <div>
+        <b>Не готова до індивідуального формату?</b>
+        <span>Групове менторство — та сама методика в колі жінок у схожій ситуації</span>
+      </div>
+      <div class="price">€100 / міс</div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. RESULT -->
+<section id="result">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Що зміниться</div>
+      <h2>Що ти отримаєш у результаті</h2>
+      <p>Не «ти навчишся» — а конкретно, що зміниться в твоєму житті за 3–6 місяців.</p>
+    </div>
+    <div class="results-grid">
+      <div class="result-card"><span class="ico">01</span><p>Матимеш чіткий план і впевненість, з чого почати — замість хаотичних спроб «оновити резюме самій»</p></div>
+      <div class="result-card"><span class="ico">02</span><p>Отримаєш підвищення, нову роль чи впевнене повернення в кар'єру після перерви</p></div>
+      <div class="result-card"><span class="ico">03</span><p>Перестанеш вибачатись за вік і кар'єрну перерву — і навчишся показувати їх як актив</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. FOR / NOT FOR -->
+<section id="for">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Для кого це</div>
+      <h2>Підходить тобі — чи ні</h2>
+    </div>
+    <div class="forwhom">
+      <div class="fw-card yes">
+        <h3>Це для тебе, якщо</h3>
+        <ul>
+          <li>Тобі 35+ і ти відчуваєш, що на роботі тебе почали «не помічати»</li>
+          <li>Плануєш повернутись у кар'єру після перерви (декрет, догляд, релокація)</li>
+          <li>Готова інвестувати час і гроші в конкретний план, а не чекати, поки «само вирішиться»</li>
+          <li>Хочеш не мотивацію, а систему й наступний крок</li>
+        </ul>
+      </div>
+      <div class="fw-card no">
+        <h3>Це не для тебе, якщо</h3>
+        <ul>
+          <li>Шукаєш швидке рішення без власних дій між сесіями</li>
+          <li>Очікуєш готове резюме «під ключ» без участі у процесі</li>
+          <li>Не готова чесно дивитись на власну ситуацію</li>
+          <li>Хочеш загальну мотиваційну розмову, а не роботу з планом</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. ABOUT -->
+<section id="about">
+  <div class="wrap about-grid">
+    <div class="about-photo">
+      <img src="ira-about-conf.jpg" alt="Ірина Луценко">
+    </div>
+    <div>
+      <div class="eyebrow">Чому саме я</div>
+      <h2>Мене звати Ірина, мені 45</h2>
+      <div class="credchips">
+        <span class="credchip">СЕО <a href="https://womafreesm.com/" target="_blank" style="text-decoration:underline;">WomaFreesm — Пробудження Жіночої Сили</a></span>
+        <span class="credchip">12+ професій</span>
+        <span class="credchip">Директорка · Hope – children of Ukraine</span>
+      </div>
+      <p>Мені 45, і я сама проходила через відчуття «а чи не пізно мені щось міняти». Тому я працюю з цією темою не з теорії, а зсередини.</p>
+      <p>За консультаціями я чую одні й ті самі фрази знову і знову:</p>
+      <ul class="about-quotes">
+        <li>«Я відчуваю, що поїзд пішов — і тепер треба просто тихо досиджувати до пенсії»</li>
+        <li>«Молодші колеги впевненіші за мене, хоча в мене набагато більше досвіду — і це злить і лякає одночасно»</li>
+        <li>«Порахувала, скільки грошей втратила за ці роки — стало соромно і страшно одночасно»</li>
+      </ul>
+      <p>Я також СЕО <a href="https://womafreesm.com/" target="_blank" style="color:var(--orange-deep);font-weight:700;text-decoration:underline;">Womafreesm</a> — міжнародної коаліції, що досліджує, як ринок і ШІ-системи системно занижують видимість жінок 45–64 років. Це дає мені доступ до доказової бази, якою не володіє більшість кар'єрних коучів.</p>
+      <p>Я не стала коучем, прочитавши книжку. Я побудувала організацію, що вимірює саме цю проблему — і ці дані лежать в основі методу, яким я працюю з кожною клієнткою.</p>
+      <div class="about-quote">«Тебе не бракує впевненості — тебе недооцінює система, яка не вміє рахувати жіночий досвід. Моя робота — навчити тебе грати і вигравати всупереч цій системі».</div>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO GALLERY -->
+<section id="gallery" style="padding-top:0;">
+  <div class="wrap">
+    <div class="photo-strip">
+      <img src="ira-brick-stylish.jpg" alt="Ірина Луценко">
+      <img src="ira-portrait-warm.jpg" alt="Ірина Луценко">
+    </div>
+  </div>
+</section>
+
+<!-- 8. CASES -->
+<section id="testimonials">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Результати</div>
+      <h2>Як це виглядає на практиці</h2>
+      <p>Реальні консультації, реальні жінки — імена змінені за їхньою згодою.</p>
+    </div>
+    <div class="cases-list">
+      <div class="case-box">
+        <span class="case-tag">Кейс — Оксана</span>
+        <div class="case-cols">
+          <div class="col">
+            <b>Точка А</b>
+            <p>Спробувала багато різних ролей — школа, репетиторство, бізнес-клуб, музей — а свого місця так і не знайшла. Довгі роки соромилась визнати, що насправді хоче керувати, а не просто виконувати.</p>
+          </div>
+          <div class="col">
+            <b>Точка Б</b>
+            <p>За одну стратегічну сесію розклали два шляхи: поступовий вхід у нову сферу через стажування чи молодшу роль, і паралельний розвиток власного проєкту. Вийшла з чіткістю, куди рухатись.</p>
+          </div>
+        </div>
+        <p class="case-insight">Іноді найбільше заважає не брак досвіду, а власна звичка применшувати те, що вже вмієш.</p>
+      </div>
+      <div class="case-box">
+        <span class="case-tag">Кейс — Ліля</span>
+        <div class="case-cols">
+          <div class="col">
+            <b>Точка А</b>
+            <p>Прийшла на консультацію з відчуттям невизначеності — не розуміла, у який бік рухатись.</p>
+          </div>
+          <div class="col">
+            <b>Точка Б</b>
+            <p>Через SWOT-аналіз особистості та техніку ікігай розібрали сильні сторони, що виснажує і який напрямок дійсно підходить. З'явилось чітке розуміння себе і свого шляху.</p>
+          </div>
+        </div>
+        <p class="case-insight">Іноді достатньо однієї консультації, щоб подивитись на себе зовсім по-іншому.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9. FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Питання</div>
+      <h2>Перш ніж записатись</h2>
+    </div>
+    <div class="faq">
+      <details class="faq-item">
+        <summary>Скільки часу це займає?</summary>
+        <p>Одна сесія — 60–90 хвилин на тиждень. Перший помітний результат (чіткий план, перекодований наратив) — вже після перших 2–3 сесій. Підвищення, нова роль чи повернення в кар'єру — реалістично за 3–6 місяців регулярної роботи.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Підходить, якщо я ще не знаю, чого хочу?</summary>
+        <p>Так. Перший блок роботи — саме SWOT + Ікігай сесія, яка допомагає це побачити. Не потрібно приходити з готовою відповіддю.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Що якщо я зараз не можу дозволити собі індивідуальний формат фінансово?</summary>
+        <p>Є групове менторство за €100/міс — та сама методика в колі інших жінок, менший чек за рахунок групового формату. Почати можна й з безкоштовної консультації, щоб зрозуміти, який формат підходить.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Це працює, якщо я не в Україні?</summary>
+        <p>Так, працюю онлайн з україномовними жінками в будь-якій країні — Польща, Німеччина, Іспанія та інші.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Чим це відрізняється від звичайного кар'єрного коучингу?</summary>
+        <p>Звичайний коучинг працює з мотивацією й самооцінкою окремо від контексту ринку. Я спочатку показую механізм — як саме вік і пауза читаються рекрутером чи ШІ-скринінгом — і лише тоді будую план, який враховує цю реальність, а не ігнорує її.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Що відбувається на першій безкоштовній консультації?</summary>
+        <p>30 хвилин: розбираємо твою ситуацію, пробуємо перший блок SWOT + Ікігай, і ти йдеш з чесною оцінкою — навіть якщо не продовжимо співпрацю далі.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 10. FINAL CTA -->
+<section id="cta">
+  <div class="wrap">
+    <div class="final">
+      <div class="eyebrow">Готова почати?</div>
+      <h2>Зроби себе знову помітною</h2>
+      <p>Залиш заявку на безкоштовний 30-хвилинний дзвінок. Без зобов'язань — розберемось, де саме система применшує твою цінність, і що з цим робити.</p>
+      <a class="btn btn-primary" href="https://t.me/IrenLutsenko?text=Хочу%20безкоштовну%20консультацію">Записатись на безкоштовний дзвінок</a>
+      <div class="micro">Не готова до особистої роботи прямо зараз? Спробуй легший перший крок — <a href="https://irenlutsen.github.io/21-day/" target="_blank">21-денний челендж «Видима і впевнена»</a></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="flinks">
+    <a href="https://www.instagram.com/">Instagram</a>
+    <a href="https://t.me/IrenLutsenko">Telegram</a>
+    <a href="https://womafreesm.com/" target="_blank">Womafreesm</a>
+    <a href="https://irenlutsen.github.io/21-day/" target="_blank">21-денний челендж</a>
+  </div>
+  <p class="fnote">Ірина Луценко — СЕО Womafreesm, кар'єрна коучка для жінок 35+. Метод Кар'єрний Компас (SWOT-аналіз особистості + Ікігай), спрямований на подолання вікового упередження ринку й ШІ.</p>
+  © 2026 Ірина Луценко
+</footer>
+
+</body>
+</html>
